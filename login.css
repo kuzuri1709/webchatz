@@ -1,0 +1,98 @@
+body{
+    background-image: url(https://i.ytimg.com/vi/tuPHm37D0h0/maxresdefault.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img{
+    height: 60px;    
+}
+
+.SignIn{
+    margin-top: 10px;
+    margin-left: 510px;
+    width: 455px;
+    height: 600px;
+    text-align: center;
+    background-color:#f9f9f9;
+    font-family: 'FF Mark W05', sans-serif;
+    font-size: 1.058681230984089rem;
+}
+
+.enter{
+    width: 380px;
+    height: 68px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.enter input{
+    border: none;
+    outline: none;
+    height: 60px;
+    width: 360px;
+    background-color:#edeeee;
+    padding-left: 10px;
+    font-family: 'FF Mark W05', sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+#Sign{
+  background-color: #363fc5;
+  border: none;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  padding: 30px 15px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  margin-top: 60px;
+}
+
+.Sign:hover {opacity: 1;}
+
+#Cant{
+    font-size: 10px;
+    color: gray;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#Cant:hover {
+    color: black;
+}
+
+#CreateAcc{
+    font-size: 10px;
+    color: gray;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#CreateAcc:hover {
+    color: black;
+}
+
+#stay{
+    margin-left: -125px;
+    margin-right: 123px;
+    margin-top: 10px;
+    
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(138, 133, 133);
+}
+  
+div h2{
+    margin-top: 70px;
+}
+  
+  
+
