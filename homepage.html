@@ -5,8 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .mySlides {display:none;}
+    </style>
+    <link rel="stylesheet" href="hompage.css">
 </head>
 <body>
+     <div>
+        <div id="header">
+            <a href=""><img id="logo" src="LOGOagain.png" alt=""></a>
+            <div class="dropdown">
+                <button class="dropbtn">HOME<svg width="10" height="5" class="non-hover arrow-down" viewBox="0 0 8 5">
+                        <path
+                            d="M.707 1.707l2.586 2.586a1 1 0 0 0 1.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
+                            fill="#7E7E7E"></path>
+                    </svg></button>
+                <div class="dropdown-content">
+                    <a id="level1" href="start1.html"></a>
+                    <a id="level2" href="start2.html"></a>
+                    <a id="level3" href="start3.html"></a>
+                </div>
+            </div>
+            <div class="media">
+                <a href="" style="text-decoration: none">
+                    <p id="MEDIA">CHAT</p>
+                </a>
+            </div>
+            <div class="media1">
+                <a href="" style="text-decoration: none">
+                    <p id="NEWS">NEWS</p>
+                </a>
+            </div>
+            
+            <div class="dropdown2">
+                <button class="dropbtn2">OUR SOCIAL<svg width="10" height="5" class="non-hover arrow-down"
+                        viewBox="0 0 8 5">
+                        <path
+                            d="M.707 1.707l2.586 2.586a1 1 0 0 0 1.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
+                            fill="#7E7E7E"></path>
+                    </svg></button>
+                <div class="dropdown-content">
+                    <a href="https://www.facebook.com/LittleDev-114954127096021/">FACEBOOK</a>
+                    <a href="https://www.youtube.com/channel/UCsQlk7K6y3vqvGf548VcsKA?view_as=subscriber">YOUTUBE</a>
+                    <a href="https://instagram.com/litt.ledev?igshid=3goy8rjd21zm">INSTARGRAM</a>
+                </div>
+            </div>
+            <!-- ACCOUNT BOX -->
+        </div>
+    </div>
+        <div class="content">
+            <div class="images">
+              <img src="depositphotos_43126969-stock-photo-send-key-on-keyboard-of.jpg">
+              <img src="marvin-meyer-SYTO3xs06fU-unsplash-e1563374356122.jpg">
+              <img src="Untitled.png">
+              <img src="shutterstock_641960737-59b1795103f4020010acd114-f85df94c68d94c2daf65d3554916bc82.png">
+            </div>
+      </div>
+      <script>
+            var indexValue = 0;
+            function slideShow(){
+              setTimeout(slideShow, 2500);
+              var x;
+              const img = document.querySelectorAll("img");
+              for(x = 0; x < img.length; x++){
+                img[x].style.display = "none";
+              }
+              indexValue++;
+              if(indexValue > img.length){indexValue = 1}
+              img[indexValue -1].style.display = "block";
+            }
+            slideShow();
+          </script>
+        
     
+
+<script src=""></script>  
 </body>
 </html>
