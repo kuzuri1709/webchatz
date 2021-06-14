@@ -18,6 +18,8 @@ btnSignIn.addEventListener("click", function (e) {
                 var user = doc.data();
                 var userId = doc.id;
                 // console.log(userId);
+                localStorage.removeItem("user");
+                localStorage.removeItem("userId");
                 localStorage.setItem("user", JSON.stringify(user));
                 localStorage.setItem("userId", userId);
                 window.location.href = "./index.html";

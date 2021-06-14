@@ -13,38 +13,34 @@ all_users.get().then((snapshot) => {
 
         var list = document.getElementsByClassName("user_box");
         for (let i = 0; i < list.length; i++) {
+            let a = 0;
             list[i].addEventListener('click', () => {
+                a++;
+                // console.log(event)
                 document.getElementById("messages").innerHTML = "";
                 chat_room_id = list[i].id + retrievedId;
                 console.log(chat_room_id);
-                // showMessages(chat_room_id);
-
-                firebase.database().ref("ChatRoom/" + chat_room_id).on("child_added", function (snapshot) {
-
-                    var html = `<div class = "chatRow"><p class="messageBox"> 
-                        ${snapshot.val().sender}:  ${snapshot.val().message}
-                        </p> <span class = "time">${snapshot.val().time}</span></div>`;
-
-                    document.getElementById("messages").innerHTML += html;
-                    document.getElementById("message").value = "";
-                    // updateScroll();
-                });
-
-                // console.log(chat_room_id);
-                // sendMessageWithId(chat_room_id, message);
-            })
+                console.log(a);
+                showMessages(chat_room_id);
+            });
         }
     })
 });
 
+// function generateChatRoomId(a, listItem) {
+    
 
+//     // console.log(chat_room_id);
+//     // sendMessageWithId(chat_room_id, message);
+//     return a;
+// }
 // console.log(retrievedUser);
 // console.log(retrievedId);
 // console.log(localStorage.getItem("user"));
 // console.log(localStorage.getItem("userId"));
 
-localStorage.removeItem("user");
-localStorage.removeItem("userId");
+// localStorage.removeItem("user");
+// localStorage.removeItem("userId");
 
 var myName = retrievedUser.username;
 // for (let i = 0; i = 1;) {
@@ -120,9 +116,18 @@ var usersList = document.getElementById("users_field");
 
 // });
 
-// function showMessages(chat_room_id) {
+function showMessages(chat_room_id) {
+    firebase.database().ref("ChatRoom/" + chat_room_id).on("child_added", function (snapshot) {
 
-// }
+        var html = `<div class = "chatRow"><p class="messageBox"> 
+                        ${snapshot.val().sender}:  ${snapshot.val().message}
+                        </p> <span class = "time">${snapshot.val().time}</span></div>`;
+
+        document.getElementById("messages").innerHTML += html;
+        document.getElementById("message").value = "";
+        // updateScroll();
+    });
+}
 
 
 // {
