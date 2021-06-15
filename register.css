@@ -1,18 +1,9 @@
 body{
     margin: 0;
-    
-}
-
-#background{
-    width: 100%;
-    height: 100%;
+    background-image: url(https://www.zipwhip.com/wp-content/uploads/2019/07/shutterstock_448553398.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: fixed;
-    z-index: -1;
-}
-
-#overlay{
-    background-color: rgba(0, 0, 0, 0.582);
-    width: 100%;
 }
 
 #content{
@@ -31,7 +22,7 @@ body{
     font-size: 50px;
     letter-spacing: 0.01em;
     line-height: 100%;
-    text-shadow: rgba(0,0,255,1) -1px -2px 0.5em;
+    text-shadow: rgb(133, 87, 28) -1px -2px 0.5em;
     user-select: none;
 }
 
@@ -56,9 +47,9 @@ body{
 }
 
 #create-button {
-  background-color: rgb(47, 19, 73);
+  background-color: rgb(170, 110, 42);
   border: 3px outset #beb1c7;
-  color:  #beb1c7;
+  color:  #ffffff;
   padding: 20px 40px;
   text-align: center;
   font-size: 16px;
