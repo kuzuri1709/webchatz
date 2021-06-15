@@ -37,7 +37,7 @@ body{
   .dropdown {
     position: relative;
     display: inline-block;
-    margin-left: 100px;
+    margin-left: 50px;
   }
   
   .dropdown-content {
