@@ -53,6 +53,7 @@ all_users.get().then((snapshot) => {
                 console.log(chat_room_id);
                 console.log(a);
                 showMessages(chat_room_id);
+<<<<<
                 for (let j = 0; j < list.length; j++) {
                     if (i == j) {
                         list[i].style.backgroundColor = "lightgray";
@@ -70,12 +71,15 @@ all_users.get().then((snapshot) => {
             });
 
 
+=======
+            });
+>>>>>>> parent of cd9f968 (change index a bit)
         }
     })
 });
 
 // function generateChatRoomId(a, listItem) {
-
+    
 
 //     // console.log(chat_room_id);
 //     // sendMessageWithId(chat_room_id, message);
@@ -140,7 +144,7 @@ function sendMessageWithId(chat_room_id, message) {
     var today = new Date();
     var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date + '  ' + time;
+    var dateTime = date + ' ' + time;
 
     if (message != "") {
         firebase.database().ref("ChatRoom/" + chat_room_id).push().set({
@@ -165,23 +169,13 @@ var usersList = document.getElementById("users_field");
 
 function showMessages(chat_room_id) {
     firebase.database().ref("ChatRoom/" + chat_room_id).on("child_added", function (snapshot) {
-        if (snapshot.val().sender == myName) {
-            var html = `<div class = "chatRow2"><p class="messageBox">
-                         ${snapshot.val().message}
-                        </p><span class = "time">${snapshot.val().time}</span></div>`;
 
-            document.getElementById("messages").innerHTML += html;
-            document.getElementById("message").value = "";
-        }
-        else {
-            var html = `<div class = "chatRow1"><p class="messageBox"> 
+        var html = `<div class = "chatRow"><p class="messageBox"> 
                         ${snapshot.val().sender}:  ${snapshot.val().message}
                         </p> <span class = "time">${snapshot.val().time}</span></div>`;
 
-            document.getElementById("messages").innerHTML += html;
-            document.getElementById("message").value = "";
-        }
-
+        document.getElementById("messages").innerHTML += html;
+        document.getElementById("message").value = "";
         // updateScroll();
     });
 }

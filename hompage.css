@@ -56,7 +56,7 @@ body{
     text-decoration: none;
     display: block;
     font-family: 'FF Mark W05', sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 10px;
   }
   
@@ -71,27 +71,6 @@ body{
   
   .dropdown:hover .dropbtn {
     background-color: #ddd5d5;
-  }
-  
-  .dropbtn1 {
-    background-color: #d8d1d1;
-    color: rgb(66, 65, 65);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    height: 60px;
-    width: 120px;
-    font-family: 'FF Mark W05', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    margin-left: -15px;
-  }
-  
-  .dropdown1 {
-    position: relative;
-    display: inline-block;
-    margin-left: 40px;
   }
   
   .dropbtn2 {
@@ -120,6 +99,29 @@ body{
     display: block;
   }
   
+  .dropbtn3 {
+    background-color: rgb(230, 227, 227);
+    color: rgb(66, 65, 65);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    width: 100px;
+    font-family: 'FF Mark W05', sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .dropbtn3:hover{
+    border-bottom: 3px solid rgb(66, 65, 65);
+    background-color: #ddd5d5;
+  }
+  
+  .dropdown3:hover .dropdown-content {
+    display: block;
+  }
+
   #MEDIA{
   color: rgb(66, 65, 65);
   font-family: 'FF Mark W05', sans-serif;
@@ -180,4 +182,17 @@ body{
   .images img{
     height: 100%;
     width: 100%;
+  }
+ 
+  video{
+    width: 100%;
+  }
+
+  .chat-now{
+    align-items: center;
+    height: 20px;
+    width: 100px;
+    z-index: 2;
+    background-color: aqua;
+    position: relative;
   }
