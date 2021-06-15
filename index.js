@@ -22,13 +22,29 @@ all_users.get().then((snapshot) => {
                 console.log(chat_room_id);
                 console.log(a);
                 showMessages(chat_room_id);
+                for (let j = 0; j < list.length; j++){
+                    if (i == j) {
+                        list[i].style.backgroundColor = "lightgray";
+                    } else {
+                        list[j].style.backgroundColor = "white";
+                    }
+                }
+
+                // for (let j = 0; j < a; j++) {
+                //     // console.log(j);
+                //     if (j == 0) {
+                        
+                //     }
+                // }
             });
+
+            
         }
     })
 });
 
 // function generateChatRoomId(a, listItem) {
-    
+
 
 //     // console.log(chat_room_id);
 //     // sendMessageWithId(chat_room_id, message);
