@@ -50,6 +50,7 @@ all_users.get().then((snapshot) => {
                 console.log(chat_room_id);
                 console.log(a);
                 showMessages(chat_room_id);
+<<<<<<< HEAD
                 for (let j = 0; j < list.length; j++) {
                     if (i == j) {
                         list[i].style.backgroundColor = "lightgray";
@@ -67,12 +68,15 @@ all_users.get().then((snapshot) => {
             });
 
 
+=======
+            });
+>>>>>>> parent of cd9f968 (change index a bit)
         }
     })
 });
 
 // function generateChatRoomId(a, listItem) {
-
+    
 
 //     // console.log(chat_room_id);
 //     // sendMessageWithId(chat_room_id, message);
