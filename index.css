@@ -98,3 +98,29 @@ ul.space_list li { margin-bottom: 1em; }
     font-weight: 600;
     background-color: white;
 }
+
+.chatRow1
+{
+    display: block;
+    padding: 2px 8px 2px 8px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.chatRow2
+{
+    display: block;
+    padding: 2px 8px 2px 8px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.time
+{
+    font-size: 12px;
+    font-weight: lighter;
+}
