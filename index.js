@@ -1,9 +1,6 @@
 var retrievedUser = JSON.parse(localStorage.getItem("user"));
 var retrievedId = localStorage.getItem("userId");
 
-if (retrievedUser == null) {
-    window.location.href = "./signin.html";
-}
 var all_users = db.collection("users");
 var chat_room_id;
 all_users.get().then((snapshot) => {
