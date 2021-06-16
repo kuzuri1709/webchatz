@@ -204,7 +204,7 @@ body{
   }
 
   .imageVid{
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     width: 40vw;
     height: calc(17.6333vw);
@@ -213,7 +213,7 @@ body{
 }
   
 .imageVid1{
-  position: absolute;
+  /* position: absolute; */
     left: 0px;
     top: 0px;
     display: block;
