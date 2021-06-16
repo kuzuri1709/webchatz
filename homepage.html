@@ -100,7 +100,39 @@
         </div>
 
         <div class="container2">
-            <p>WE ARE LITTLEDEV</p>
+           <div>
+                <svg width="800" height="30">
+                    <rect id="red-rectangle" width="30" height="30" x="0" y="0" fill="red" ></rect>
+                    <animate 
+                             xlink:href="#red-rectangle"
+                             attributeName="x" 
+                             from="10"
+                             to="805" 
+                             dur="10.5s"
+                             begin="0s"
+                             repeatCount="indefinite"
+                             fill="freeze" 
+                             id="rect-anim"/>
+                
+                </svg>
+            </div>
+            <div>
+                <p>WE ARE LITTLEDEV</p>
+            </div>
+            <svg width="800" height="30">
+                <rect id="blue-rectangle" width="30" height="30" x="805" y="0" fill="red" ></rect>
+                <animate 
+                         xlink:href="#blue-rectangle"
+                         attributeName="x" 
+                         from="805"
+                         to="10" 
+                         dur="10.5s"
+                         begin="0s"
+                         repeatCount="indefinite"
+                         fill="freeze" 
+                         id="rect-anim"/>
+                
+            </svg>           
         </div>
     </div>
 
