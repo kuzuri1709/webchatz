@@ -313,6 +313,7 @@ body{
   height: 500px;
   border-top: solid 1px black;
   background-color: rgb(238, 238, 238);
+  text-align: center;
 }
 
 p{
