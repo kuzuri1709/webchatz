@@ -214,10 +214,10 @@ body{
     height: 100%;
     margin: 0px;
     -o-box-shadow:      12px 12px 29px #555;
--khtml-box-shadow:  12px 12px 29px #555;
--moz-box-shadow:    12px 12px 29px #555;
--webkit-box-shadow: 12px 12px 29px #555;
-box-shadow:         12px 12px 29px #555;
+    -khtml-box-shadow:  12px 12px 29px #555;
+    -moz-box-shadow:    12px 12px 29px #555;
+    -webkit-box-shadow: 12px 12px 29px #555;
+    box-shadow:         12px 12px 29px #555;
 }
 
 .chat-now-content{
@@ -241,6 +241,12 @@ box-shadow:         12px 12px 29px #555;
   font-size: 12px;
   font-family: 'FF Mark W05', sans-serif;
 }
+
+.chat-now:hover{
+  background-color: tomato;
+}
+
+
 
 .chat-now-inside{
   height: 50px;
