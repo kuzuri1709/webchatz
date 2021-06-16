@@ -316,10 +316,32 @@ body{
   text-align: center;
 }
 
-p{
+#p1{
   font-weight: 900;
   font-size: 100px;
   font-family: 'FF Mark W05', sans-serif;
+}
+
+#p2{
+  font-weight: 600;
+  font-size: 20px;
+  font-family: 'FF Mark W05', sans-serif;
+  text-align: justify;
+  color: black;
+}
+ 
+#p3{
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'FF Mark W05', sans-serif;
+  color: #768079;
+  text-align: justify;
+  width: 300px;
+}
+
+.center{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 
