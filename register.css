@@ -1,9 +1,8 @@
 body{
     margin: 0;
-    background-image: url(https://www.zipwhip.com/wp-content/uploads/2019/07/shutterstock_448553398.jpg);
+    background-image: url(https://www.mongooseresearch.com/hubfs/EWU-admissions-case-study.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    position: fixed;
 }
 
 #content{
@@ -11,6 +10,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
+    position: relative;
 }
 
 .note{
@@ -22,7 +22,6 @@ body{
     font-size: 50px;
     letter-spacing: 0.01em;
     line-height: 100%;
-    text-shadow: rgb(133, 87, 28) -1px -2px 0.5em;
     user-select: none;
 }
 
