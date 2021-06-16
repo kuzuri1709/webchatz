@@ -192,9 +192,7 @@ body{
     align-items: center;
     height: 20px;
     width: 100px;
-    z-index: 2;
     background-color: aqua;
-    position: relative;
   }
 
   .Infront{
