@@ -188,13 +188,6 @@ body{
     width: 100%;
   }
 
-  .chat-now{
-    align-items: center;
-    height: 20px;
-    width: 100px;
-    background-color: aqua;
-  }
-
   .Infront{
     width: 100%;
     z-index: 0;
@@ -220,4 +213,26 @@ body{
     width: 100%;
     height: 100%;
     margin: 0px;
+}
+
+.chat-now-content{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  height: 50px;
+}
+
+.chat-now{
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  background-color: aqua;
+  z-index: 1;
+}
+
+.chat-now-inside{
+  height: 50px;
+  width: 200px;
+  justify-content: center;
+  display: flex;
 }
