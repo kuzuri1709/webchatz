@@ -64,3 +64,10 @@ body{
     color: white;
 }
 
+.already{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'FF Mark W05', sans-serif;
+}
