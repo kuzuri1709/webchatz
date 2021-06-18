@@ -351,7 +351,6 @@ body{
   margin-top: -15.5px;
   display: flex;
   justify-content: column;
-  justify-content: space-evenly;
 }
 
 #what{
