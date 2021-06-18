@@ -1,8 +1,9 @@
 body{
-    margin: 0;
-    background-image: url(https://www.mongooseresearch.com/hubfs/EWU-admissions-case-study.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgb(175, 81, 81);
+}
+
+img{
+    height: 60px;    
 }
 
 #content{

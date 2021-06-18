@@ -1,7 +1,5 @@
 body{
-    background-image: url(BKI.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgb(175, 81, 81);
 }
 
 img{
