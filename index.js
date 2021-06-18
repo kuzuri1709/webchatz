@@ -22,23 +22,25 @@ all_users.get().then((snapshot) => {
 
 function pickUser(list) {
     for (let i = 0; i < list.length; i++) {
-        countClick(list,i);
+        let a = 0;
+        list[i].addEventListener('click', countClick(i, a));
     }
 }
 
-function countClick(list,i) {
-    let a = 0;
-    list[i].addEventListener('click', () => {
+function countClick(i, a) {
+    // console.log(person);
+    // console.log(i);
+    return function () {
+        // console.log(person);
+    // console.log(i);
         a++;
         document.getElementById("messages").innerHTML = "";
         let n = list[i].id.localeCompare(retrievedId);
         if (n == 1) {
             chat_room_id = list[i].id + "-" + retrievedId;
-
         }
         if (n == -1) {
             chat_room_id = retrievedId + "-" + list[i].id;
-
         }
         if (n == 0) {
             chat_room_id = retrievedId + "-" + list[i].id;
@@ -47,17 +49,19 @@ function countClick(list,i) {
         console.log(chat_room_id);
         console.log(a);
         showMessages(chat_room_id);
+        
         for (let j = 0; j < list.length; j++) {
             if (i == j) {
                 list[i].style.backgroundColor = "lightgray";
             } else {
                 list[j].style.backgroundColor = "white";
-            }
-        }
+            };
+        };
+        list[i].removeEventListener('click', countClick(i,a))
+    }
 
-
-    });
 }
+
 
 function displayUsers(user) {
     var html = user.map(item => {
