@@ -122,6 +122,31 @@ body{
     display: block;
   }
 
+  .dropbtn4 {
+    background-color: rgb(230, 227, 227);
+    color: rgb(66, 65, 65);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    width: 100px;
+    font-family: 'FF Mark W05', sans-serif;
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .dropbtn4:hover{
+    border-bottom: 3px solid rgb(66, 65, 65);
+    background-color: #ddd5d5;
+  }
+
+  .language:hover .dropdown-content {
+    display: block;
+  }
+
+  
+
   #MEDIA{
   color: rgb(66, 65, 65);
   font-family: 'FF Mark W05', sans-serif;
@@ -519,3 +544,5 @@ body{
     font-family: 'Raleway', Arial, sans-serif;
     font-size: 12px;
   }
+
+ 
