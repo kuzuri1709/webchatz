@@ -19,11 +19,11 @@ body{
 
 #searchBox{
     height: 40px;
-    width: 95%;
+    width: 80%;
     background-color: rgb(236, 235, 235);
     margin-top: 10px;
     border: none;
-    margin-left: 1.25vh ;
+    margin-left: 7vh ;
 }
 
 #users_list
