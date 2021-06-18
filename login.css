@@ -8,7 +8,7 @@ img{
 
 .SignIn{
     margin-top: 10px;
-    margin-left: 510px;
+    
     width: 455px;
     height: 600px;
     text-align: center;
@@ -79,7 +79,6 @@ img{
 }
 
 #stay{
-    margin-left: -125px;
     margin-right: 123px;
     margin-top: 10px;
     
