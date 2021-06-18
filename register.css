@@ -6,24 +6,23 @@ img{
     height: 60px;    
 }
 
+.SignUp{
+    margin-top: 10px;
+    margin-left: 510px;
+    width: 455px;
+    height: 600px;
+    text-align: center;
+    background-color:#f9f9f9;
+    font-family: 'FF Mark W05', sans-serif;
+    font-size: 1.058681230984089rem;
+}
+
 #content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 64px;
     position: relative;
-}
-
-.note{
-    font-family: 'FF Mark W05', sans-serif;
-    font-size: 72px;
-    color: rgb(255, 255, 255);
-    margin: auto;
-    font-weight: 900;
-    font-size: 50px;
-    letter-spacing: 0.01em;
-    line-height: 100%;
-    user-select: none;
 }
 
 #cool{
@@ -31,44 +30,51 @@ img{
 }
 
 .input{
-    background: transparent;
-    border: 0 solid #ffffff;
-    border-bottom-color: rgb(255, 255, 255);
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    color: rgb(255, 255, 255);
-    width: 400px;
-    height: 30px;
-    font-size: 20px;
+    border: none;
+    outline: none;
+    height: 60px;
+    width: 360px;
+    background-color:#edeeee;
+    padding-left: 10px;
+    font-family: 'FF Mark W05', sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    border-radius: 5px;
 }
 
 .input-component{
-    padding: 50px;
+    width: 380px;
+    height: 68px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #create-button {
-  background-color: rgb(170, 110, 42);
-  border: 3px outset #beb1c7;
-  color:  #ffffff;
-  padding: 20px 40px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  margin-top: 60px;
-  opacity: 1;
-  cursor: pointer;
+    background-color: #363fc5;
+    border: none;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    margin-top: 20px;
 }
 
-.create-button:hover{
-    color: white;
-}
+.create-button:hover {opacity: 1;}
+
 
 .already{
+    font-size: 10px;
+    color: gray;
     text-decoration: none;
-    color: white;
-    font-weight: 700;
-    font-size: 12px;
-    font-family: 'FF Mark W05', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.already:hover {
+    color: black;
 }
