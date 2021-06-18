@@ -541,8 +541,8 @@ body{
   }
   .last a{
     color: rgb(128, 128, 128);
-    font-family: 'Raleway', Arial, sans-serif;
-    font-size: 12px;
+    
+    font-size: 12pxfont-family: 'Raleway', Arial, sans-serif;;
   }
 
  

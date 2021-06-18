@@ -21,7 +21,9 @@ body{
     height: 40px;
     width: 95%;
     background-color: rgb(236, 235, 235);
-    border-radius: 50px;
+    margin-top: 10px;
+    border: none;
+    margin-left: 1.25vh ;
 }
 
 #users_list
@@ -68,6 +70,8 @@ ul.space_list li { margin-bottom: 1em; }
 
 .messageBox1{
     background-color: rgb(235, 232, 232);
+    font-family: 'Raleway', Arial, sans-serif;
+    color: black;
     border-radius: 20px;
     padding: 2px 8px 2px 8px;
     max-width: 500px !important;
@@ -76,7 +80,9 @@ ul.space_list li { margin-bottom: 1em; }
     margin: 0;
 }
 .messageBox2{
-    background-color: lightblue;
+    background-color: rgb(113, 137, 241);
+    color: white;
+    font-family: 'Raleway', Arial, sans-serif;
     border-radius: 20px;
     padding: 2px 8px 2px 8px;
     max-width: 500px !important;
