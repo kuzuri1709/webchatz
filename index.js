@@ -166,7 +166,7 @@ var usersList = document.getElementById("users_field");
 function showMessages(chat_room_id) {
     firebase.database().ref("ChatRoom/" + chat_room_id).on("child_added", function (snapshot) {
         if (snapshot.val().sender == myName) {
-            var html = `<div class = "chatRow2"><p class="messageBox">
+            var html = `<div class = "chatRow2"><p class="messageBox2">
                          ${snapshot.val().message}
                         </p><span class = "time">${snapshot.val().time}</span></div>`;
 
@@ -174,7 +174,7 @@ function showMessages(chat_room_id) {
             document.getElementById("message").value = "";
         }
         else {
-            var html = `<div class = "chatRow1"><p class="messageBox"> 
+            var html = `<div class = "chatRow1"><p class="messageBox1"> 
                         ${snapshot.val().sender}:  ${snapshot.val().message}
                         </p> <span class = "time">${snapshot.val().time}</span></div>`;
 
