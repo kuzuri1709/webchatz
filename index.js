@@ -1,6 +1,7 @@
 var retrievedUser = JSON.parse(localStorage.getItem("user"));
 var retrievedId = localStorage.getItem("userId");
 let usersArray = [];
+var innerHTMLUser = document.getElementById("user");
 
 if (retrievedUser == null) {
     window.location.href = "./signin.html";
@@ -10,11 +11,12 @@ var chat_room_id;
 all_users.get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         // console.log(doc.data());
-        var html = `<div class = "user_box" id = "${doc.id}">
-    ${doc.data().username}</div>`
+        usersArray.push({
+            username: doc.data().username,
+            id: doc.id
+        });
+        displayUsers(usersArray);
 
-        usersList.innerHTML += html;
-        usersArray.push(doc.data().username);
 
         var list = document.getElementsByClassName("user_box");
         for (let i = 0; i < list.length; i++) {
@@ -76,6 +78,14 @@ all_users.get().then((snapshot) => {
     })
 });
 
+function displayUsers(user) {
+    var html = user.map(item => {
+        return `<div class = "user_box" id = "${item.id}">
+    ${item.username}</div>`;
+    }).join("");
+
+    innerHTMLUser.innerHTML = html;
+}
 // function generateChatRoomId(a, listItem) {
 
 
@@ -190,11 +200,12 @@ function showMessages(chat_room_id) {
 
 const searchBox = document.getElementById("searchBox");
 searchBox.addEventListener("keyup", (e) => {
-    // console.log(e.target.value);
     const searchString = e.target.value;
-    usersArray.filter(item => {
-        
+    const filteredUsersArray = usersArray.filter(item => {
+        return item.username.includes(searchString);
     })
+    // console.log(filteredUsersArray);
+    displayUsers(filteredUsersArray);
 })
 // {
 //     id,
