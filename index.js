@@ -2,6 +2,7 @@ var retrievedUser = JSON.parse(localStorage.getItem("user"));
 var retrievedId = localStorage.getItem("userId");
 let usersArray = [];
 var innerHTMLUser = document.getElementById("user");
+var list;
 
 if (retrievedUser == null) {
     window.location.href = "./signin.html";
@@ -16,67 +17,67 @@ all_users.get().then((snapshot) => {
             id: doc.id
         });
         displayUsers(usersArray);
-
-
-        var list = document.getElementsByClassName("user_box");
-        for (let i = 0; i < list.length; i++) {
-            let a = 0;
-            list[i].addEventListener('click', () => {
-                a++;
-                // console.log(event)
-                document.getElementById("messages").innerHTML = "";
-                let n = list[i].id.localeCompare(retrievedId);
-                if (n == 1) {
-                    chat_room_id = list[i].id + "-" + retrievedId;
-
-                }
-                if (n == -1) {
-                    chat_room_id = retrievedId + "-" + list[i].id;
-
-                }
-                if (n == 0) {
-                    // // let string1 = list[i].substring(k), string2 = retrievedId.substring(k);
-                    // for (let k = 0; k < retrievedId.length; k++) {
-                    //     if (list[i].id.substring(k).localeCompare(retrievedId.substring(k)) == 0) {
-                    //         continue;
-                    //     }
-                    //     if (n == 1) {
-                    //         chat_room_id = list[i].id + "-" + retrievedId;
-                    //         break;
-                    //     }
-                    //     if (n == -1) {
-                    //         chat_room_id = retrievedId + "-" + list[i].id;
-                    //         break;
-                    //     }
-                    // }
-
-                    chat_room_id = retrievedId + "-" + list[i].id;
-                }
-
-                // chat_room_id = list[i].id + "-" + retrievedId;
-                console.log(chat_room_id);
-                console.log(a);
-                showMessages(chat_room_id);
-                for (let j = 0; j < list.length; j++) {
-                    if (i == j) {
-                        list[i].style.backgroundColor = "lightgray";
-                    } else {
-                        list[j].style.backgroundColor = "white";
-                    }
-                }
-
-                // for (let j = 0; j < a; j++) {
-                //     // console.log(j);
-                //     if (j == 0) {
-
-                //     }
-                // }
-            });
-
-
-        }
     })
 });
+
+function pickUser(list) {
+    for (let i = 0; i < list.length; i++) {
+        let a = 0;
+        list[i].addEventListener('click', () => {
+            a++;
+            // console.log(event)
+            document.getElementById("messages").innerHTML = "";
+            let n = list[i].id.localeCompare(retrievedId);
+            if (n == 1) {
+                chat_room_id = list[i].id + "-" + retrievedId;
+
+            }
+            if (n == -1) {
+                chat_room_id = retrievedId + "-" + list[i].id;
+
+            }
+            if (n == 0) {
+                // // let string1 = list[i].substring(k), string2 = retrievedId.substring(k);
+                // for (let k = 0; k < retrievedId.length; k++) {
+                //     if (list[i].id.substring(k).localeCompare(retrievedId.substring(k)) == 0) {
+                //         continue;
+                //     }
+                //     if (n == 1) {
+                //         chat_room_id = list[i].id + "-" + retrievedId;
+                //         break;
+                //     }
+                //     if (n == -1) {
+                //         chat_room_id = retrievedId + "-" + list[i].id;
+                //         break;
+                //     }
+                // }
+
+                chat_room_id = retrievedId + "-" + list[i].id;
+            }
+
+            // chat_room_id = list[i].id + "-" + retrievedId;
+            console.log(chat_room_id);
+            console.log(a);
+            showMessages(chat_room_id);
+            for (let j = 0; j < list.length; j++) {
+                if (i == j) {
+                    list[i].style.backgroundColor = "lightgray";
+                } else {
+                    list[j].style.backgroundColor = "white";
+                }
+            }
+
+            // for (let j = 0; j < a; j++) {
+            //     // console.log(j);
+            //     if (j == 0) {
+
+            //     }
+            // }
+        });
+
+
+    }
+}
 
 function displayUsers(user) {
     var html = user.map(item => {
@@ -85,6 +86,8 @@ function displayUsers(user) {
     }).join("");
 
     innerHTMLUser.innerHTML = html;
+    list = document.getElementsByClassName("user_box");
+    pickUser(list);
 }
 // function generateChatRoomId(a, listItem) {
 
