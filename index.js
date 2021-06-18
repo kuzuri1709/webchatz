@@ -186,7 +186,11 @@ function showMessages(chat_room_id) {
     });
 }
 
-
+var searchBox = document.getElementById("searchBox");
+searchBox.addEventListener("keyup", () => {
+    let searchName = searchBox.value;
+    
+})
 // {
 //     id,
 //     username,
