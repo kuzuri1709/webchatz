@@ -1,5 +1,6 @@
 var retrievedUser = JSON.parse(localStorage.getItem("user"));
 var retrievedId = localStorage.getItem("userId");
+let usersArray = [];
 
 if (retrievedUser == null) {
     window.location.href = "./signin.html";
@@ -13,6 +14,7 @@ all_users.get().then((snapshot) => {
     ${doc.data().username}</div>`
 
         usersList.innerHTML += html;
+        usersArray.push(doc.data().username);
 
         var list = document.getElementsByClassName("user_box");
         for (let i = 0; i < list.length; i++) {
@@ -186,10 +188,13 @@ function showMessages(chat_room_id) {
     });
 }
 
-var searchBox = document.getElementById("searchBox");
-searchBox.addEventListener("keyup", () => {
-    let searchName = searchBox.value;
-    
+const searchBox = document.getElementById("searchBox");
+searchBox.addEventListener("keyup", (e) => {
+    // console.log(e.target.value);
+    const searchString = e.target.value;
+    usersArray.filter(item => {
+        
+    })
 })
 // {
 //     id,

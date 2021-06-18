@@ -14,10 +14,10 @@ body{
 #list-section{
     height: 100vh;
     width: 20%;
-    
+    border-right: 1px solid black;
 }
 
-#searchbox{
+#searchBox{
     height: 40px;
     width: 95%;
     background-color: rgb(236, 235, 235);
@@ -34,7 +34,7 @@ body{
     width: 80%;
     display: flex;
     flex-direction: column;
-    border-left: 1px solid rgb(211, 211, 211);
+    /* border-left: 1px solid rgb(211, 211, 211); */
 }
 
 #chat-input{
@@ -46,7 +46,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid gray
+    border: 1px solid gray;
 }
 
 ul.space_list li { margin-bottom: 1em; }
@@ -105,6 +105,7 @@ ul.space_list li { margin-bottom: 1em; }
     font-size: 18px;
     font-weight: 600;
     background-color: white;
+    display: block;
 }
 
 .chatRow1
