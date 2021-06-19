@@ -59,7 +59,7 @@ all_users.get().then((snapshot) => {
             // console.log(chat_room_id);
             // console.log(a);
             showMessages(chat_room_id);
-
+            document.getElementById("status_name").textContent = list[i].textContent;
             for (let j = 0; j < list.length; j++) {
                 if (i == j) {
                     list[i].style.backgroundColor = "lightblue";
@@ -117,6 +117,8 @@ all_users.get().then((snapshot) => {
 
                 document.getElementById("messages").innerHTML += html;
                 document.getElementById("message").value = "";
+                
+
             }
             else {
                 var html = `<div class = "chatRow1"><p class="messageBox1"> 
