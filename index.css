@@ -54,6 +54,9 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10xp;
+    
 }
 
 #chat-input{

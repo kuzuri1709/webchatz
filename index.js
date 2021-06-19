@@ -60,6 +60,7 @@ all_users.get().then((snapshot) => {
             // console.log(a);
             showMessages(chat_room_id);
             document.getElementById("status_name").textContent = list[i].textContent;
+            document.getElementById("status_bar").style.backgroundColor = "lightblue";
             for (let j = 0; j < list.length; j++) {
                 if (i == j) {
                     list[i].style.backgroundColor = "lightblue";
