@@ -58,55 +58,14 @@ form.addEventListener('submit', (e) => {
         if (checkPwd(form.password.value, form.confirm_password.value) == true) {
 
             all_users.get().then((snapshot) => {
-                // console.log(snapshot.docs.length)
-                // snapshot.docs.forEach(doc => {
-                //     var x = true;
-                //     if (doc.data().username == form.username.value) {
-                //         alert("This username has already been taken!");
-                //         x = false;
-                //         console.log(x);
-                //         if (x) {
-                //             all_users.add({
-                //                 email: form.email.value,
-                //                 username: form.username.value,
-                //                 password: form.password.value
-                //             });
 
-                //             form.email.value = '';
-                //             form.username.value = '';
-                //             form.password.value = '';
-                //             form.confirm_password.value = '';
-                //         }
-                //         x = true;
-                //         // console.log(x);
-                //     } else {
-                //         // console.log("else");
-                //     }
-
-                //     // console.log(doc.data().username)
-
-                // })
                 var y = 0;
                 for (let i = 0; i < snapshot.docs.length; i++) {
                     // console.log(snapshot.docs[i].data().username);
                     if (snapshot.docs[i].data().username == form.username.value) {
                         alert("This username has already been taken!");
                         y++;
-                        // console.log(x);
-                        // if (x) {
-                        //     all_users.add({
-                        //         email: form.email.value,
-                        //         username: form.username.value,
-                        //         password: form.password.value
-                        //     });
 
-                        //     form.email.value = '';
-                        //     form.username.value = '';
-                        //     form.password.value = '';
-                        //     form.confirm_password.value = '';
-                        // }
-                        // x = true;
-                        // console.log(x);
                     } else {
                         continue;
                     }
@@ -124,13 +83,16 @@ form.addEventListener('submit', (e) => {
                     form.username.value = '';
                     form.password.value = '';
                     form.confirm_password.value = '';
+
+                    alert("Success!");
+                    // window.location.href = "./signin.html";
                 }
             })
 
 
         }
     } else {
-        alert("Failed!");
+        alert("Fail!");
     }
 });
 
